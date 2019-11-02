@@ -9,17 +9,19 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { GlobalStyle } from "../../index.styles";
+import Navbar from "../navbar/navbar";
+import Header from "../header/header";
+import Footer from "../footer/footer";
 
 const Layout = (props) => {
 
   return (
     <>
         <GlobalStyle />
-        <div>
-            <h1> Navbar </h1>
-        </div>
+        <Header />
+        <Navbar />
         <main> {props.children} </main>
-        <footer> Footer</footer>
+        <Footer />
 
     </>
   )
