@@ -8,7 +8,7 @@ const HeaderWrapper = styled.header`
 const Header = props => {
     return (
         <HeaderWrapper>
-            <h1> Anja Ngozi </h1>
+            <h1> anja ngozi </h1>
         </HeaderWrapper>
     )
 }
