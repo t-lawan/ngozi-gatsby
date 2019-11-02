@@ -1,5 +1,6 @@
 import styled, { css, createGlobalStyle } from "styled-components"
-
+import background from './images/background.jpg';
+import wave from './images/wave.png'
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Averia+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Averia+Libre|Exo&display=swap');
@@ -14,6 +15,12 @@ body {
   margin: 0 auto;
   font-family: 'Averia Libre', cursive !important;
   font-style: normal;
+
+  }
+  body {
+    cursor: url(${wave}), pointer;
+  background-image: url(${background});
+  ${'' /* background-repeat: round; */}
   }
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Exo', sans-serif !important; 
@@ -32,7 +39,7 @@ body {
   }
   h1 {
   margin-bottom: 1.45rem;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   line-height: 1.1;
 }
 h2 {
