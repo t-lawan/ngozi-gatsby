@@ -12,7 +12,11 @@ import { GlobalStyle } from "../../index.styles";
 import Navbar from "../navbar/navbar";
 import Header from "../header/header";
 import Footer from "../footer/footer";
+import styled from 'styled-components'
 
+const LayoutWrapper = styled.div`
+  background-image: url(../../images/background.jpg)
+`
 const Layout = (props) => {
 
   return (

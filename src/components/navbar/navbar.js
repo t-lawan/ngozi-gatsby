@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const NavWrapper = styled.nav`
   display: flex;
@@ -13,7 +14,7 @@ const NavInner = styled.div`
   margin: auto;
 `
 
-const NavItem = styled(Link)`
+const NavItem = styled(AniLink)`
   display: block;
   padding: 8px 16px;
   text-decoration: none;
@@ -42,12 +43,11 @@ const Navbar = props => {
   const navbarItems = data.allContentfulNavbarLinks.edges.sort((a,b) => {
     return a.node.order - b.node.order;
   })
-
   return (
     <NavWrapper>
       <NavInner>
         {navbarItems.map(item => (
-          <NavItem key={item.node.id} to={item.node.page.slug}>
+          <NavItem fade key={item.node.id} to={item.node.page.slug}>
             {" "}
             {item.node.displayedTitle}{" "}
           </NavItem>
