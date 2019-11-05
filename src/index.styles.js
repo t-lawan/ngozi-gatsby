@@ -20,7 +20,7 @@ body {
   body {
     cursor: url(${wave}), pointer;
   background-image: url(${background});
-  ${'' /* background-repeat: round; */}
+  background-repeat: round;
   }
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Exo', sans-serif !important; 
