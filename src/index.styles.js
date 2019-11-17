@@ -1,4 +1,4 @@
-import styled, { css, createGlobalStyle } from "styled-components"
+import { css, createGlobalStyle } from "styled-components"
 import background from './images/background.jpg';
 import wave from './images/wave.png'
 export const GlobalStyle = createGlobalStyle`
