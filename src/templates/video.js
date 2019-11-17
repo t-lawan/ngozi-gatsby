@@ -37,6 +37,7 @@ const Video = props => {
               src={item.node.url}
               width="400"
               height="400"
+              title={item.node.title? item.node.title : item.node.id}
               frameBorder="0"
             ></iframe>
             <p> {item.node.title} </p>
