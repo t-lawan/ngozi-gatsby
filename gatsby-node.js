@@ -21,6 +21,9 @@ exports.createPages = async ({ graphql, actions }) => {
             childContentfulPageContentRichTextNode {
               json
             }
+            content {
+              json
+            }
             slug
             title
             type

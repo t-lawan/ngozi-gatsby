@@ -1,6 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faInstagram, faSoundcloud, faMixcloud } from "@fortawesome/free-brands-svg-icons";
+library.add(fab, faFacebook, faFacebookF, faInstagram, faSoundcloud, faMixcloud)
 
 const FooterWrapper = styled.footer`
   padding: 1em;
@@ -39,7 +44,9 @@ const Footer = props => {
   return (
     <FooterWrapper>
       {socialMediaLinks.map((item) => (
-          <FooterLink key={item.node.id} target="_blank" href={item.node.url}> {item.node.name}</FooterLink>
+          <FooterLink key={item.node.id} target="_blank" href={item.node.url}> 
+            <FontAwesomeIcon icon={['fab', item.node.name.toLowerCase()]}/>
+          </FooterLink>
       ))}
     </FooterWrapper>
   )
