@@ -57,9 +57,7 @@ const Footer = props => {
         <FooterLink key={item.node.id} target="_blank" href={item.node.url}>
           <FontAwesomeIcon
             icon={
-              item.node.isEmail
-                ? ["fas", "envelope"]
-                : ["fab", item.node.name.toLowerCase()]
+              ["fab", item.node.name.toLowerCase()]
             }
           />
         </FooterLink>
