@@ -27,7 +27,7 @@ const Project = props => {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <ProjectParagraph>{children}</ProjectParagraph>,
       [BLOCKS.OL_LIST]: (node, children) => <ProjectOrderedList> {children} </ProjectOrderedList>,
-      [BLOCKS.LIST_ITEM]: (node, children) => <li> {children} </li>,
+      [BLOCKS.LIST_ITEM]: (node, children) => <ProjectParagraph> {children} </ProjectParagraph>,
       // [BLOCKS.EMBEDDED_ASSET]: (node, children) => <img src={node.data.target.fields.file['en-US'].url} alt={node.data.target.fields.title['en-US']} />
     },
     renderText: text => text.replace('!', '?'),
