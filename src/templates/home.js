@@ -1,11 +1,13 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import { PageWrapper } from "./page.styles";
-import HomePageLinks from "../components/homepagelinks/homepagelinks";
+import SEO from "../components/seo"
+import { PageWrapper } from "./page.styles"
+import HomePageLinks from "../components/homepagelinks/homepagelinks"
 
 const Home = props => {
   return (
     <Layout>
+      <SEO title="Home" />
       <PageWrapper>
         <HomePageLinks />
       </PageWrapper>

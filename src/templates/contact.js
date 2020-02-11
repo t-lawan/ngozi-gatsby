@@ -1,9 +1,10 @@
 import React from "react"
 import Layout from "../components/layout/layout"
+import SEO from "../components/seo"
 import { PageWrapper } from "./page.styles"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import "@fortawesome/fontawesome-svg-core/styles.css"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { fas, faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -25,7 +26,6 @@ library.add(
   faMixcloud,
   faEnvelope
 )
-
 const SocialMediaWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -34,7 +34,7 @@ const SocialMediaWrapper = styled.div`
 `
 
 const ContactMeButton = styled.p`
-display: ${props => (props.show ? "inherit" : "none")};
+  display: ${props => (props.show ? "inherit" : "none")};
   &:hover {
     opacity: 0.7;
   }
@@ -75,9 +75,13 @@ class Contact extends React.Component {
     })
     return (
       <Layout>
+        <SEO title="Contact" />
         <PageWrapper>
           <ContactWrapper>
-            <ContactMeButton onClick={this.toggle} show={!this.state.showSocialMediaLinks}>
+            <ContactMeButton
+              onClick={this.toggle}
+              show={!this.state.showSocialMediaLinks}
+            >
               {" "}
               click to contact me{" "}
             </ContactMeButton>

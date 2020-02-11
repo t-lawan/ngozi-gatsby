@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/layout"
+import SEO from "../components/seo"
 import { PageWrapper } from "./page.styles"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
@@ -30,6 +31,7 @@ const Video = props => {
 
   return (
     <Layout>
+      <SEO title="Videos" />
       <PageWrapper>
         {videos.map(item => (
           <VideoItem key={item.node.id}>

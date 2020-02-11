@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/layout"
+import SEO from "../components/seo"
 import { PageWrapper } from "./page.styles";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -18,7 +19,6 @@ const ProjectOrderedList = styled.ul`
 `
 
 const Project = props => {
-  console.log('2', props.pageContext.content.json);
 
   const options = {
     renderMark: {
@@ -36,6 +36,7 @@ const Project = props => {
   const text = documentToReactComponents(props.pageContext.content.json, options);
   return (
     <Layout>
+      <SEO title="Project" />
       <ProjectWrapper>
         {text}
         {/* <p> Project </p> */}
