@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout"
 import { PageWrapper } from "./page.styles"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { fas, faEnvelope } from "@fortawesome/free-solid-svg-icons"
