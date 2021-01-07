@@ -15,12 +15,13 @@ body {
   margin: 0 auto;
   font-family: 'Averia Libre', cursive !important;
   font-style: normal;
-
+  color: white;
   }
   body {
     cursor: url(${wave}), pointer;
-  background-image: url(${background});
-  background-repeat: round;
+    background: "white";
+    background-image: url(${background});
+    background-repeat: round;
   }
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Exo', sans-serif !important; 
@@ -34,8 +35,8 @@ body {
     color: inherit;
     }
   a {
-    text-decoration: underline;
-    color: black;
+    ${'' /* text-decoration: underline; */}
+    color: inherit;
   }
   h1 {
   margin-bottom: 1.45rem;
