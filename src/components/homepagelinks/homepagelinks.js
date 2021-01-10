@@ -30,6 +30,10 @@ const OuterLink = styled.a`
   text-decoration: none;
   min-width: 8em;
   margin: 1em;
+  padding: 2rem;
+  @media (max-width: ${size.tablet}) {
+    padding: 1rem;
+  }
 `
 
 const InnerLink = styled(AniLink)`
